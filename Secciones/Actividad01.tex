@@ -1,0 +1,30 @@
+\section{Actividad No 01 – Comandos} 
+¿Que sucede al ejecutar los siguientes comandos? 
+
+\begin{itemize}
+	\item STARTUP OPEN
+	\\Abre los ficheros. Es en este modo cuando podemos decir que la base de datos está
+		completamente operativa.
+	\\Cuando arrancamos este estado existe la posibilidad de arrancar una misma base de datos
+    con distintas instancias, indicando que fichero init.ora queremos que utilice.
+	
+
+	\item STARTUP MOUNT
+	\\Analiza que los ficheros que le indica el parámetro CONTROLFILE en el archivo de
+		parámetros, son los que los que se han puesto y que la ruta indicada sea la correcta.
+	\\Este estado se usa en caso de que queramos hacer una copia de seguridad de la base de
+		datos.
+	\\Como en el estado anterior, en modo MOUNT pueden aparecer algunos problemas como los
+		siguientes:
+		
+		\begin{itemize}
+			\item Problemas de hardware.
+			\item Que existan ficheros no sincronizados (lo cual implicaría que se hiciera un 	recover)
+			\item No existan los ficheros de datos o de redo log que el CONTROLFILE debe leer. 
+			Si el fichero de datos que falta no es crítico, puedo arrancar sin él y después recuperarlo 
+			con un backup.
+			
+		\end{itemize}
+
+
+\end{itemize} 
