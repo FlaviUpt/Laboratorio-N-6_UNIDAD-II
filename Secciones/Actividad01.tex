@@ -26,5 +26,36 @@
 			
 		\end{itemize}
 
+\vspace*{0.20in}
+\vspace*{0.1in}
+\begin{large}
+Mediante el comando SHUTDOWN podemos apagar una base de datos Oracle. \\
+\end{large}
+
+tipos:
+
+\item SHUTDOWN NORMAL
+	\\Realiza un cierre consistente de la base de datos de destino con prioridad normal (opción predeterminada), lo que significa:
+		
+		\begin{itemize}
+			\item No se permiten nuevas conexiones después de la emisión de la declaración.
+			\item Antes de apagarse, la base de datos espera a que los usuarios conectados actualmente se desconecten
+			\item El próximo inicio de la base de datos no requerirá la recuperación de la instancia.
+			
+		\end{itemize}
+
+
+\item SHUTDOWN TRANSACTIONAL
+	\\Realiza un cierre constante de la base de datos de destino al tiempo que minimiza la interrupción para los clientes, con las siguientes consecuencias:
+		
+		\begin{itemize}
+			\item Los clientes que actualmente realizan transacciones pueden completar, es decir, confirmar o finalizar antes del cierre.
+			\item Ningún cliente puede iniciar una nueva transacción en esta instancia; Se desconecta cualquier cliente que intente iniciar una nueva transacción
+			\item Después de que todas las transacciones se hayan confirmado o finalizado, cualquier cliente que aún esté conectado se desconectará.
+			
+		\end{itemize}
+
+
+
 
 \end{itemize} 
