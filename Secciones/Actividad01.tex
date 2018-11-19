@@ -76,6 +76,28 @@ tipos:
 		\end{itemize}
 
 
+          \item SHUTDOWN INMEDIATE
+	       \\Quizás la mejor manera de cerrar inicialmente la base de datos es el comando de SHUTDOWN INMEDIATE . Este comando evitará los nuevos inicios de sesión, luego revertirá las transacciones no confirmadas y luego desactivará la base de datos. En el proceso de derribar la base de datos, Oracle también descargará todos los cambios en la memoria a los archivos de datos de la base de datos, al igual que lo hace un cierre regular.
+                  \\ Esto hace que el inicio de la base de datos sea más rápido.
+ Este es un ejemplo de cierre de una base de datos con el comando de cierre inmediato:
+                      \begin{figure}[htb]
+                      \begin{center}
+                      \includegraphics[width=8cm]{./Imagenes/shutdown_inmediate}
+                      \end{center}
+                      \end{figure}
+
+
+        \\item SHUTDOWN ABORT
+                   \\El comando shutdown abort es prácticamente una forma garantizada de cerrar la base de datos. Es un "bloqueo duro" de la base de datos, y esto puede resultar en un tiempo más largo para iniciar la copia de seguridad de la base de datos. Aún así, no puede dañar la base de datos con el comando shutdown abort, y durante sus años de DBA encontrará más de unas pocas ocasiones para usar el comando shutdown abort .
+
+                     \\Un shutdown abort  puede ser su primer método de elección, ya que puede haber ocasiones en las que deba forzar el cierre de la base de datos. Aquí hay un ejemplo usando el comando shutdown abort:
+
+                      \begin{figure}[htb]
+                      \begin{center}
+                      \includegraphics[width=8cm]{./Imagenes/shutdown_abort}
+                      \end{center}
+                      \end{figure}
+
 
 
 \end{itemize} 
