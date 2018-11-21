@@ -2,7 +2,9 @@
 Enliste y describa los tipos de TableSpace que existen en Oracle
 		
 \begin{itemize}
-\item completar
+\item Tablespace SYSTEM : Se crea automaticamente al hacer la instalacion de oracle, o al crear una BD tambien contiene el diccionario de datos
+
+\item Tablespace temporales : Es aquel que solamente puede haber objetos temporales. No se pueden crear ojbetos permanentes como pueden ser los indices, las tablas o los segmentos de rollback (Optimizacion operaciones de ordenacion) . Dentro de estas puede hacer de tipo de deshacer cambios(9i) , estas mismas se utilizan para gestionar transacciones incompletas. En versiones anteriores (Rollback),Tambien hay con tamaño de bloque de variable (9i), de tipo BigFile (10g) y de tipo SmallFile.
 \end{itemize} 
 
 
